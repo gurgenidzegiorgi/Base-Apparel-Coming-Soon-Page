@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Base Apparel Coming Soon Page</title>
+
+</head>
+
+<body>
+  <main>
+    <header>
+      <img src="./images/logo.svg" alt="logo">
+    </header>
+    <img class="mobile-img" src="./images/hero-mobile.jpg" alt="girl">
+    <img class="desktop-img" src="./images/hero-desktop.jpg" alt="girl">
+    <div class="content-div">
+      <img class="content-logo" src="./images/logo.svg" alt="logo">
+      <div class="context">
+        <h1> <span>We're</span> coming soon</h1>
+        <p class="content-text">Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our launch deals.
+        </p>
+        <form>
+          <div class="input-div">
+            <input id="input" type="text" placeholder="Email Address" onkeydown="validation()">
+            <button class="arrow-img"> <img src="./images/icon-arrow.svg" alt="arrow icon"> </button>
+            <img id="errorImg" class="error-img-act error-img-dsbl" src="./images/icon-error.svg" alt="error icon">
+          </div>
+          <p id="validText" class="error-msg-act error-msg-dsbl error-msg-valid">Please provide a valid email!</p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script>
+
+    function validation() {
+      let errorImg = document.querySelector('#errorImg');
+      let errorMsg = document.querySelector('#validText');
+      let input = document.querySelector('#input');
+      let symbolMatch = /^[A-Za-z\._\-0-9]+[@][A-Za-z]+[\.][a-z]{2,4}$/;
+      if (!input.value.match(symbolMatch)) {
+        errorMsg.classList.replace('error-msg-dsbl', 'error-msg-act')
+        errorImg.classList.replace('error-img-dsbl', 'error-img-act')
+        input.style.borderColor = 'red';
+      } else {
+        errorImg.classList.replace('error-img-act', 'error-img-dsbl')
+        errorMsg.textContent = 'Valid Email!'
+        errorMsg.style.color = 'green'
+        input.style.borderColor = 'green';
+      }
+    }
+
+  </script>
+
+</body>
+
+</html>
