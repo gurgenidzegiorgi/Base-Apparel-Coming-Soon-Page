@@ -13,4 +13,4 @@
 ## Author
 
 - GitHub Repo - [Giorgi Gurgenidze](https://github.com/gurgenidzegiorgi/Base-Apparel-Coming-Soon-Page)
-- Live Site Url - [GitHub Server](https://www.your-site.com)
+- Live Site Url - [GitHub Server](https://gurgenidzegiorgi.github.io/Base-Apparel-Coming-Soon-Page/)
